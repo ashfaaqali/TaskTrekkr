@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/md_theme_light_secondaryContainer"
+    android:padding="20dp"
+    android:orientation="vertical"
     tools:context=".AddTask">
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:layout_weight=".5"
+            android:background="@color/md_theme_light_secondary" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="@string/task_details"
+            android:textColor="@color/md_theme_light_secondary"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:layout_weight=".5"
+            android:background="@color/md_theme_light_secondary" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_et_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/md_theme_light_inverseOnSurface"
+        android:hint="@string/task_title">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/title_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/desc_et_field"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/md_theme_light_inverseOnSurface"
+        android:layout_marginTop="18dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/desc_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/note_for_task"
+            android:gravity="top"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/set_location"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="18dp"
+        android:singleLine="true"
+        android:drawableEnd="@drawable/add_location"
+        app:cornerRadius="5dp"
+        android:text="@string/the_location_where_you_want_to_be_reminded"
+        android:drawableTint="@color/md_theme_light_inverseOnSurface"
+        />
+
+
+</LinearLayout>

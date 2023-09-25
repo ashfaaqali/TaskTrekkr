@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TaskTrekkr</string>
+    <string name="task_title">Task title</string>
+    <string name="note_for_task">Note for task</string>
+    <string name="the_location_where_you_want_to_be_reminded">The location where you want to be reminded</string>
+    <string name="task_details">Task Details</string>
 </resources>
